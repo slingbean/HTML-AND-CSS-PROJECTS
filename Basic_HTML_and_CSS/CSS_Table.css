@@ -1,0 +1,15 @@
+table {
+    background-color: lavender;
+    color: plum;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid mediumPurple;
+    padding: 10px;
+    text-align: center;
+}
+
+tr:hover {
+    background-color: orchid;
+}
