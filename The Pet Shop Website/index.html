@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="CSS/style.css">
         <title>The Pet Shop</title>
         <meta charset="UTF-8">
         <meta name="description" content="“Explore our pet shop and sicover cats, dogs, rabbits, guinea pigs, fish, and reptiles.">
     </head>
     <body>
       <!--Navbar-->  
-      <nav>
-        <ul>
+      <nav class="nav-bar">
+        <ul id="nav-border">
             <li>
                 <a href="index.html">Home</a>
             </li>
@@ -44,7 +45,7 @@
       <!--Header-->
       <header>
         <div>
-            <h1>Welcome to The Pet Shop!</h1>
+            <h1 class="animate-text">Welcome to The Pet Shop!</h1>
         </div>
       </header>
 
@@ -56,42 +57,54 @@
 
       <!--Pet Images-->
       <section>
-        <div>
+        <div class="container">
             <h2>Choose a Pet</h2>
 
             <!--Cat Image-->
-            <div id="cat">
+            <div id="cat" class="column">
+                <div class= "image-container">
                 <img src="images/cat.png" alt="picture of two tabby kittens side-by-side under a chair">
+                </div>
             </div>
 
             <!--Dog Image-->
-            <div id="dog">
+            <div id="dog" class="column">
+                <div class="image-container">
                 <h3>Dogs and Puppies</h3>
                 <img src="images/dog.png" alt="picture of two dogs, one golden retriever and one german shepherd mix, sitting side-by-side in the grass">
+                </div>
             </div>
 
             <!--Rabbit Image-->
-            <div id="rabbits">
+            <div id="rabbits" class="column">
+                <div class="image-container">
                 <h3>Rabbits</h3>
                 <img src="images/rabbits.png" alt="picture of a baby rabbit sitting facing left in front of other baby rabbits">
+                </div>
             </div>
 
             <!--Guinea Pigs-->
-            <div id="guineapigs">
+            <div id="guineapigs" class="column">
+                <div class="image-container">
                 <h3>Guinea Pigs</h3>
                 <img src="images/guineapigs.png" alt="picture of three guinea pigs standing side-by-side, all eating the same stalk of celery">
+                </div>
             </div>
 
             <!--Fish Image-->
-            <div id="fish">
+            <div id="fish" class="column">
+                <div class="image-container">
                 <h3>Fish</h3>
                 <img src="images/fish.png" alt="picture of four goldfish swimming in a fish tank with a coral background">
+                </div>
             </div>
 
             <!--Reptile Image-->
-            <div id="reptiles">
+            <div id="reptiles" class="column">
+                <div class="image-container">
                 <h3>Reptiles</h3>
                 <img src="images/beardedDragon.png" alt="picture of a bearded dragon lizard sitting on a rock">
+                </div>
             </div>
 
         </div>
@@ -99,7 +112,7 @@
 
       <!--Videos-->
       <section>
-        <div id="video">
+        <div id="video" class="container">
             <h3>Videos</h3>
 
             <iframe
