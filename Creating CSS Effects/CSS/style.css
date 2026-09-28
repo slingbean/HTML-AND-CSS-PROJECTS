@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 /* Nav Bar */
 .nav-bar {
     position: sticky;
@@ -23,7 +25,7 @@ ul {
 a {
     display: block;
 
-    font-family: Calibri, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 23px;
     font-weight: 600;
 
@@ -93,7 +95,7 @@ footer {
 
 /*styles the text in the footer*/
 .footer-text {
-    font-family: Calibri, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 23px;
     font-weight: 400;
     color: rgb(228, 159, 0);
