@@ -40,6 +40,11 @@ nav a:hover {
     text-decoration: underline;
 }
 
+nav a:focus-visible {
+    outline: 3px solid #171717;
+    outline-offset: 3px;
+}
+
 /* General Section Styles */
 
 section {
@@ -141,8 +146,10 @@ label {
 
 input, textarea {
     width: 100%;
+    margin-bottom: 10px;
     padding: 12px;
     border: 1px solid #bdbbb5;
+    border-radius: 5px;
     background-color: #ffffff;
     font-family: inherit;
     font-size: 16px;
@@ -163,6 +170,11 @@ button {
 
 button:hover {
     background-color: #444444;
+}
+
+button:focus-visible {
+    outline: 3px solid #171717;
+    outline-offset: 3px;
 }
 
 /* Footer */
