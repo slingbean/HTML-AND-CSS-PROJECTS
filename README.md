@@ -14,9 +14,15 @@ I am continuing to build on these skills through additional coursework and perso
 
 PROJECTS:
 
+Personal Portfolio Website
+
+A personal portfolio website designed and developed to showcase my web development work, skills, and projects. 
+This project brings together the skills I developed throughout my HTML and CSS coursework into a finished personal website. It provides a central place to present my projects and demonstrate my growing abilities in web design and front-end development. The portfolio was designed with a clean, minimalist aesthetic and focuses on presenting my work in a clear and visually engaging way.
+
 Academy Cinemas - Movie Theatre Website
 
 A responsive one-page movie theatre website built with HTML, CSS, and Bootstrap.
+
 This project focuses on creating a structured commercial-style website using Bootstrap components alongside custom CSS. It includes a navigatioin bar, movie information, featured content, contact information, and a multi-column folder.
 
 
