@@ -1,0 +1,384 @@
+/* General Styles */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Courier New", Courier, monospace;
+    background-color: #f4f1ea;
+    color: #222222;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+::selection {
+    background-color: #626a82;
+    color: #ffffff;
+}
+
+/* Navigation */
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    padding: 22px 30px;
+    border-bottom: 1px solid #d8d4cb;
+    background-color: #f4f1ea;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: #222222;
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #626a82;
+}
+
+nav a:focus-visible {
+    outline: 2px solid #626a82;
+    outline-offset: 5px;
+}
+
+/* General Section Styles */
+
+section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 110px 35px;
+    scroll-margin-top: 65px;
+}
+
+/* Home Section */
+
+.home {
+    max-width: 1400px;
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    padding: 45px 60px;
+}
+
+.home-top,
+.home-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #626a82;
+}
+
+.home-top {
+    padding-bottom: 18px;
+    border-bottom: 1px solid #d8d4cb;
+}
+
+.home-bottom {
+    padding-top: 18px;
+    border-top: 1px solid #d8d4cb;
+}
+
+.home-title {
+    padding: 70px 0;
+}
+
+.home-title h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(60px, 10vw, 145px);
+    font-weight: 400;
+    letter-spacing: -5px;
+    line-height: 1.1;
+    margin: 0;
+}
+
+.home-title p {
+    margin-top: 25px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 11px;
+    font-style: normal;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #626a82;
+}
+
+/* Headings */
+
+h1 {
+    font-size: 56px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+/* About Section */
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    display: block;
+}
+
+.about-text {
+    max-width: 500px;
+}
+
+/* Portfolio Section */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.tattoo-photo {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background-color: #e8e6e1;
+}
+
+.tattoo-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.tattoo-photo:hover img {
+    transform: scale(1.04);
+}
+
+/* Gallery Buttons */
+.gallery-button {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.gallery-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-button:hover {
+    background: transparent;
+}
+
+.gallery-button:focus-visible {
+    outline: 2px solid #777e96;
+    outline-offset: 4px;
+}
+
+/* Lightbox */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 15, 15, 0.94);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+#lightbox-image {
+    display: block;
+    max-width: 85%;
+    max-height: 85vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Lightbox Controls */
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    background: transparent;
+    border: none;
+    color: #f5f4f1;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+}
+
+.lightbox-close {
+    top: 20px;
+    right: 30px;
+    font-size: 36px;
+}
+
+.lightbox-prev {
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.lightbox-next {
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background: transparent;
+    color: #a4a9bd;
+}
+
+.lightbox-counter {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #f5f4f1;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+/* Video Section */
+
+iframe {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16 / 9;
+    border: none;
+}
+
+/* Contact Section */
+
+form {
+    max-width: 600px;
+}
+
+label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 6px;
+}
+
+input, textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px;
+    border: 1px solid #bdbbb5;
+    border-radius: 5px;
+    background-color: #ffffff;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    border: 1px solid #171717;
+    background-color: #171717;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #444444;
+}
+
+button:focus-visible {
+    outline: 3px solid #171717;
+    outline-offset: 3px;
+}
+
+/* Footer */
+
+footer {
+    padding: 30px;
+    text-align: center;
+    border-top: 1px solid #d6d4cf;
+    font-size: 13px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+    nav {
+        gap: 15px;
+        padding: 18px 15px;
+    }
+
+    nav a {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    section {
+        padding: 75px 20px;
+    }
+
+    .home {
+        min-height: 65vh;
+        padding: 30px 20px;
+    }
+
+    .home-top,
+    .home-bottom {
+        font-size: 8px;
+        letter-spacing: 0.5px;
+    }
+
+    .home-title h1 {
+        font-size: clamp(48px, 12vw, 80px);
+        letter-spacing: -2px;
+    }
+
+    .home-title p {
+        font-size: 9px;
+        letter-spacing: 1.5px;
+    }
+}
