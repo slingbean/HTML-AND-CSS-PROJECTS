@@ -60,3 +60,33 @@ const tooltipTriggerList = document.querySelectorAll(
 tooltipTriggerList.forEach(function(element) {
     new bootstrap.Tooltip(element);
 });
+
+//JQuery
+//shrinks header size when the document is scrolled down by 80 pixels
+$(document).on("scroll", function() {
+    //when the webpage is scrolled down from the top by 50px this if statement will trigger
+    if ($(document).scrollTop() > 50) {
+        //once the 50px requirement has been met add the
+        //nav shrink class selector to the same HTML element
+        //that has the nav class
+        $("nav").addClass("nav-shrink");
+        //adjust the position of the mobile drop menu to accomodate new height decrease
+        $("div.navbar-collapse").css("margin-top", "-6px");
+    } else {
+        //if the webpage has not been scrolled down or is back
+        //at the top the nav-shrink class selector is removed
+        //from the HTML element with the nav class selector
+        $("nav").removeClass("nav-shrink");
+        //the margin for the drop down menu is now returned to it's original amount
+        $("div.navbar-collapse").css("margin-top", "14px");
+    }
+});
+
+//close mobile menu when a navigation link is clicked
+$(document).ready(function () {
+    //on click when an element contains just the navlink class and not the dropdown toggleand then also close when an element with the class .dropdown-item has been clicked
+    $(".navbar-nav").on('click', 'nav-link:not(".dropdown-toggle"), .dropdown-item', function() {
+        //collapse the navbar when a link or dropdown item is clicked
+        $(".navbar-collapse").collapse('hide');
+    });
+});
