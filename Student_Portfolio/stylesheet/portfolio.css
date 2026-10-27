@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wdth,wght@100..125,200..800&family=SUSE+Mono:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400;1,700&family=SUSE+Mono:wght@400;500;600;700&display=swap');
 
 /* General Styles */
 
@@ -14,8 +14,9 @@ body {
     margin: 0;
     background-color: #f5f1e8;
     color: #171717;
-    font-family: "Atkinson Hyperlegible Mono", monospace;
-    line-height: 1.6;
+    font-family: "Libre Caslon Text", Georgia, serif;
+    font-size: 1rem;
+    line-height: 1.7;
 }
 
 h1,
@@ -27,12 +28,24 @@ blockquote {
 
 h1,
 h2 {
-    font-family: "SUSE Mono", monospace;
-    font-weight: 500;
+    font-family: "Libre Caslon Display", Georgia, serif;
+    font-weight: 400;
 }
 
 p {
     font-size: 1rem;
+}
+
+/* Interface Typography */
+
+.Navbar,
+.Section_Label,
+.Section_Number,
+.Work_Link,
+.Contact_Form label,
+.Contact_Form button,
+.Footer {
+    font-family: "SUSE Mono", monospace;
 }
 
 a {
@@ -144,17 +157,19 @@ textarea {
 
 .Home h1 {
     margin-bottom: 1rem;
-
-    font-size: clamp(3rem, 8vw, 7rem);
-    line-height: 0.95;
-    letter-spacing: -0.04em;
+    font-size: clamp(4rem, 8vw, 7.5rem);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.035em;
 }
 
 .Home h2 {
     margin-bottom: 2rem;
-
-    font-size: clamp(1.4rem, 2.5vw, 2.5rem);
-    line-height: 1.1;
+    font-size: clamp(1.7rem, 3vw, 3rem);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
 }
 
 .Home_Intro {
@@ -239,6 +254,14 @@ blockquote::after {
     align-items: start;
 }
 
+/* Editorial Section Headings */
+
+.About_Heading h2,
+.Work_Heading h2,
+.Contact_Heading h2 {
+    font-style: italic;
+}
+
 .About_Heading h2 {
     max-width: 600px;
 
@@ -251,6 +274,8 @@ blockquote::after {
 .About_Text {
     max-width: 600px;
     padding-top: 1.5rem;
+    text-align: justify;
+    hyphens: auto;
 }
 
 .About_Text p {
@@ -288,6 +313,8 @@ blockquote::after {
 .Work_Text {
     max-width: 500px;
     padding-top: 1.5rem;
+    text-align: justify;
+    hyphens: auto;
 }
 
 .Work_Text p {
