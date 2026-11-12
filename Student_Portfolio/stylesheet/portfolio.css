@@ -372,7 +372,7 @@ blockquote::after {
     transform: scale(1.035);
 }
 
-.Work-Project_Info h3 {
+.Work_Project_Info h3 {
     margin: 0 0 0.5rem;
     font-family: "SUSE Mono", monospace;
     font-size: 0.85rem;
@@ -646,3 +646,35 @@ textarea:focus-visible {
         gap: 1rem;
     }
 }
+/* Final portfolio refinements */
+:root { --paper:#f5f1e8; --ink:#171717; --accent:#4b4a78; --light-accent:#c6c3ef; }
+section[id] { scroll-margin-top: 90px; }
+.Home { min-height: 85vh; grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr); }
+.Home h1 { font-size:clamp(3rem,7vw,7rem); }
+.Home h2, .About_Heading h2, .Contact_Heading h2 { font-family:"Libre Caslon Text",Georgia,serif; }
+.Hero_CTA { display:inline-block; margin-top:2rem; padding:.8rem 1.1rem; background:var(--accent); color:var(--paper); font:600 .78rem "SUSE Mono",monospace; }
+.Hero_CTA:hover { background:var(--ink); }
+.Work_Gallery { max-width:none; margin-top:2rem; }
+.Work_Image img { object-fit:contain; background:#292929; transition:transform .3s ease; }
+.Work_Project_Info { padding-top:1rem; }
+.Work_Project_Info h3 { line-height:1.5; }
+.Work_Project:hover h3,.Work_Link:hover { color:var(--light-accent); }
+.Work a:focus-visible { outline:2px solid var(--light-accent); }
+.Work_Text,.About_Text { text-align:left; }
+.Skills { font:600 .75rem/1.9 "SUSE Mono",monospace; color:var(--accent); }
+.Footer_Links { display:flex; gap:.7rem; }
+@media(max-width:800px){.Home{grid-template-columns:1fr; min-height:auto}.Home_Image{order:0}.Home h1{font-size:clamp(3rem,10vw,6rem)}.Home_Image img{max-width:100%;aspect-ratio:4/3}.Work_Content,.About_Content,.Contact_Content{gap:1.5rem}.Section_Number{margin-bottom:2rem}}
+@media(max-width:500px){.Navbar{align-items:center;flex-wrap:wrap;gap:.7rem}.Nav_Links{flex-direction:row;gap:.8rem}.Home{padding-top:7rem}.Footer{gap:1rem}.Home h1{font-size:clamp(2.5rem,11vw,4rem)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.Home_Image img{animation:none;filter:none}.Work_Project:hover .Work_Image img{transform:none}.Work_Image img{transition:none}}
+
+.Work_Link:hover { border-color:var(--light-accent); }
+@media(max-width:500px){section[id]{scroll-margin-top:110px}}
+
+.Work_Link:hover { border-color:var(--light-accent); }
+@media(max-width:500px){section[id]{scroll-margin-top:110px}}
+
+.Work_Link:hover { border-color:var(--light-accent); }
+@media(max-width:500px){section[id]{scroll-margin-top:110px}}
+
+.Work_Link:hover { border-color:var(--light-accent); }
+@media(max-width:500px){section[id]{scroll-margin-top:110px}.Home h1{overflow-wrap:anywhere}.Home_Content{min-width:0}.Home_Image{min-width:0}blockquote::after{max-width:65%}}
